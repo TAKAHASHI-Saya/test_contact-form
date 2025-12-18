@@ -43,9 +43,6 @@ class AdminController extends Controller
     {
         Contact::find($request->id)->delete();
 
-        $contacts = Contact::Paginate(7);
-        $categories = Category::all();
-
-        return view('admin.admin', compact('contacts', 'categories'));
+        return redirect()->route('admin');
     }
 }
