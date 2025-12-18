@@ -14,4 +14,34 @@ class Contact extends Model
     {
         return $this->belongsTo('App\Models\Category');
     }
+
+    public function scopeKeywordSearch($query, $keyword)
+    {
+        if($keyword !== null && $keyword !== ''){
+            $query->where(function($q)use($keyword){
+                $q->where('first_name', 'like', '%'. $keyword . '%')
+                ->orWhere('last_name', 'like', '%'. $keyword . '%')
+                ->orWhere('email', 'like', '%'. $keyword . '%');
+            });
+        }
+    }
+    public function ScopeCategorySearch($query, $category_id)
+    {
+        if($category_id !== null && $category_id !== ''){
+            $query->where('category_id', $category_id);
+        }
+    }
+    public function scopeGenderSearch($query, $gender)
+    {
+        if($gender !== null){
+            $query->where('gender', $gender);
+        }
+    }
+    public function scopeDateSearch($query, $created_at)
+    {
+        if($created_at !== null && $created_at !== '')
+        {
+            $query->whereDate('created_at', $created_at);
+        }
+    }
 }

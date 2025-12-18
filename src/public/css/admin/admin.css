@@ -1,0 +1,166 @@
+.admin__content{
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+.search__content{
+    display: flex;
+    justify-content: center;
+}
+.search-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.search-form__item--text{
+    width: 300px;
+    margin-right: 20px;
+    height: 40px;
+}
+.search-form__item--select{
+    width: 200px;
+    margin-right: 20px;
+    height: 40px;
+}
+.search-form__item--date{
+    margin-right: 20px;
+    height: 40px;
+}
+.search-form__button{
+    margin-right: 20px;
+    padding: 10px;
+    width: 10%;
+    height: 40px;
+    border: none;
+    background: #82746b;
+    color: #f4f4f4;
+    cursor: pointer;
+}
+.search-form__reset{
+    padding: 10px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid #d9c6b5;
+    text-decoration: none;
+    color: #f4f4f4;
+    background: #d9c6b5;
+    cursor: pointer;
+    font-size: 12px;
+}
+.admin__heading{
+    margin-bottom: 40px;
+    text-align: center;
+}
+.admin-table{
+    display: flex;
+    justify-content: center;
+}
+.admin-table__inner{
+    border: 1px solid #f1ece6;
+}
+.admin-table__row{
+    border-bottom: 1px solid #f1ece6;
+}
+.admin-table__header{
+    background: #8c7a6a;
+    padding: 15px;
+}
+.admin-table__header--span{
+    color: #f1ece6;
+}
+.admin-table__item{
+    padding: 15px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+}
+
+.modal.is-active {
+    display: block;
+}
+
+.modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 24px;
+    border-radius: 4px;
+    min-width: 320px;
+}
+
+.modal__table{
+    margin: 20px;
+}
+
+.modal__table-inner{
+    padding: 10px;
+    text-align: left;
+    height: 50px;
+}
+
+.modal__table-header{
+    margin-right: 50px;
+}
+
+.modal__close {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #8c7a6a;
+    border-radius: 50%;
+    background: #fff;
+    color: #8c7a6a;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: all 0.2s ease;
+}
+
+.delete-form{
+    display: flex;
+    justify-content: center;
+}
+
+.delete-form__button {
+    width: 50px;
+}
+
+.delete-form__button-submit {
+    padding: 5px;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    background: #ff0000;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ページネーション */
+.pagination {
+    display: flex;
+    justify-content: right;
+    gap: 8px;
+    margin: 24px 0;
+}
+svg.w-5.h-5 {
+    width: 30px;
+    height: 30px;
+}
