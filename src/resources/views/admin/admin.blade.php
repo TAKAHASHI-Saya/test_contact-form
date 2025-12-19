@@ -31,8 +31,19 @@
         </form>
         <a href="{{route('admin')}}" class="search-form__reset">リセット</a>
     </div>
-    <div class="pagination">
+    <div class="other__content">
+        <div class="export">
+            <form action="{{route('export')}}" method="get" class="export-form">
+                <input type="hidden" name="keyword" value="{{request('keyword')}}">
+                <input type="hidden" name="gender" value="{{request('gender')}}">
+                <input type="hidden" name="category_id" value="{{request('category_id')}}">
+                <input type="hidden" name="created_at" value="{{request('created_at')}}">
+                <button type="submit" class="export-form__button">エクスポート</button>
+            </form>
+        </div>
+        <div class="pagination">
         {{$contacts->links()}}
+        </div>
     </div>
     <div class="admin-table">
         <table class="admin-table__inner">
@@ -52,7 +63,7 @@
                 <th class="admin-table__header"></th>
             </tr>
             @foreach($contacts as $contact)
-            <tr class="admin-table__row">
+            <tr class="admin-table__row--hover">
                 <td class="admin-table__item">
                     {{$contact['first_name']}}
                     {{$contact['last_name']}}

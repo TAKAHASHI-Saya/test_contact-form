@@ -27,3 +27,4 @@ Route::get('/register', [AdminController::class, 'register'])->name('register');
 
 Route::get('/search', [AdminController::class, 'search']);
 Route::delete('/delete', [AdminController::class, 'destroy']);
+Route::get('/export', [AdminController::class, 'exportCsv'])->name('export');

@@ -48,6 +48,23 @@
     cursor: pointer;
     font-size: 12px;
 }
+.other__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-bottom: 20px;
+}
+.export-form__button{
+    padding: 10px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    background: #edeae6;
+    color: #8b7969;
+    cursor: pointer;
+}
 .admin__heading{
     margin-bottom: 40px;
     text-align: center;
@@ -71,6 +88,10 @@
 }
 .admin-table__item{
     padding: 15px;
+    background-color: transparent;
+}
+.admin-table__row--hover:hover > .admin-table__item {
+    background-color: #FFDAB9;
 }
 .modal {
     display: none;
@@ -154,12 +175,6 @@
 }
 
 /* ページネーション */
-.pagination {
-    display: flex;
-    justify-content: right;
-    gap: 8px;
-    margin: 24px 0;
-}
 svg.w-5.h-5 {
     width: 30px;
     height: 30px;
